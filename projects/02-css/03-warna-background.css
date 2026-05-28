@@ -1,0 +1,7 @@
+.elemen {
+    color: #333;                           /* Warna teks */
+    background-color: #f5f5f5;             /* Warna latar */
+    background-image: url('bg.jpg');       /* Gambar latar */
+    background-size: cover;                /* Ukuran gambar latar */
+    opacity: 0.8;                          /* Transparansi */
+}

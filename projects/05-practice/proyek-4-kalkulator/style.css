@@ -1,0 +1,215 @@
+/* ========================================
+   Proyek 4: Kalkulator
+   Konsep: CSS Grid, Flexbox, Glassmorphism
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a; /* Slate 900 */
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background effects */
+.bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.bg-glow-1 {
+    width: 300px;
+    height: 300px;
+    background: #3b82f6; /* Blue 500 */
+    top: -50px;
+    left: -50px;
+}
+
+.bg-glow-2 {
+    width: 400px;
+    height: 400px;
+    background: #ec4899; /* Pink 500 */
+    bottom: -100px;
+    right: -100px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+}
+
+/* Calculator Card */
+.calculator {
+    background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Display Area */
+.display {
+    text-align: right;
+    margin-bottom: 24px;
+    padding: 10px 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.display-expression {
+    font-size: 16px;
+    color: #94a3b8; /* Slate 400 */
+    min-height: 24px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+.display-result {
+    font-size: 48px;
+    font-weight: 300;
+    color: #f8fafc;
+    letter-spacing: -1px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* Hide scrollbar */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+.display-result::-webkit-scrollbar {
+    display: none;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Button Base */
+.btn-calc {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    height: 64px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.btn-calc:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-calc:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Specific Buttons */
+.btn-zero {
+    grid-column: span 2;
+    border-radius: 16px;
+    justify-content: flex-start;
+    padding-left: 28px;
+}
+
+.btn-operator {
+    color: #38bdf8; /* Sky 400 */
+    background: rgba(56, 189, 248, 0.1);
+    font-size: 26px;
+}
+
+.btn-operator:hover {
+    background: rgba(56, 189, 248, 0.2);
+}
+
+.btn-operator.active {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.btn-clear-all {
+    color: #f43f5e; /* Rose 500 */
+    background: rgba(244, 63, 94, 0.1);
+}
+
+.btn-clear-all:hover {
+    background: rgba(244, 63, 94, 0.2);
+}
+
+.btn-func {
+    color: #a78bfa; /* Violet 400 */
+    background: rgba(167, 139, 250, 0.1);
+}
+
+.btn-func:hover {
+    background: rgba(167, 139, 250, 0.2);
+}
+
+.btn-equals {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-equals:hover {
+    background: linear-gradient(135deg, #7dd3fc, #a5b4fc);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Pulse Animation for Button Clicks */
+@keyframes pulseBtn {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.btn-animating {
+    animation: pulseBtn 0.3s ease-out;
+}

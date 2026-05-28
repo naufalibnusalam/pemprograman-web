@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form (Formulir) HTML</title>
+</head>
+<body>
+    <form action="/kirim" method="POST">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan..."></textarea>
+
+        <label for="kota">Kota:</label>
+        <select id="kota" name="kota">
+            <option value="jakarta">Jakarta</option>
+            <option value="bandung">Bandung</option>
+            <option value="surabaya">Surabaya</option>
+        </select>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>

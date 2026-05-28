@@ -1,0 +1,9 @@
+.kotak {
+    width: 300px;
+    height: 200px;
+    padding: 20px;              /* Jarak dalam */
+    margin: 10px auto;          /* Jarak luar, auto = tengah */
+    border: 2px solid #333;     /* Garis tepi */
+    border-radius: 8px;         /* Sudut melengkung */
+    box-sizing: border-box;     /* Padding dihitung dalam width */
+}

@@ -1,0 +1,19 @@
+/* Default: untuk semua layar */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 { font-size: 24px; }
+    .grid { grid-template-columns: 1fr; }
+}

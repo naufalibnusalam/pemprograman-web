@@ -1,0 +1,9 @@
+.teks {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;       /* normal, bold, 100-900 */
+    text-align: center;      /* left, right, center, justify */
+    text-decoration: none;   /* underline, line-through */
+    line-height: 1.6;
+    letter-spacing: 1px;
+}

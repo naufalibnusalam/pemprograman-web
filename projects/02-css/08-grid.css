@@ -1,0 +1,11 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 kolom sama rata */
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* Item menempati 2 kolom */
+.item-lebar {
+    grid-column: span 2;
+}

@@ -1,0 +1,13 @@
+/* Gunakan satuan relatif */
+.responsive {
+    width: 100%;          /* Persentase */
+    max-width: 1200px;    /* Batas maksimal */
+    font-size: 1rem;      /* Relatif terhadap root */
+    padding: 2vw;         /* Relatif terhadap viewport */
+}
+
+/* Gambar responsif */
+img {
+    max-width: 100%;
+    height: auto;
+}

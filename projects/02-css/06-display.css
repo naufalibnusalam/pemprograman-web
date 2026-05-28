@@ -1,0 +1,4 @@
+.blok    { display: block; }        /* Mengambil seluruh lebar */
+.sebaris { display: inline; }       /* Sebaris, tidak bisa set width/height */
+.ib      { display: inline-block; } /* Sebaris, bisa set width/height */
+.hilang  { display: none; }         /* Tidak ditampilkan */

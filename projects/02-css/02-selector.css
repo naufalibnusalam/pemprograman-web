@@ -1,0 +1,18 @@
+/* Element Selector */
+h1 { color: navy; }
+
+/* Class Selector (bisa dipakai berkali-kai) */
+.judul { font-size: 24px; }
+
+/* ID Selector (unik, sekali pakai) */
+#header { background-color: #333; }
+
+/* Descendant Selector */
+.container p { color: gray; }
+
+/* Pseudo-class */
+a:hover { color: red; }
+button:active { transform: scale(0.95); }
+
+/* Pseudo-element */
+p::first-letter { font-size: 2em; }

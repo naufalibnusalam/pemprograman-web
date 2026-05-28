@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Praktis</title>
+</head>
+<body>
+    <h2 id="angka">0</h2>
+    <button id="tambah">+</button>
+    <button id="kurang">−</button>
+
+    <script>
+        let count = 0;
+        const angkaEl = document.getElementById("angka");
+
+        document.getElementById("tambah").addEventListener("click", () => {
+            count++;
+            angkaEl.textContent = count;
+        });
+
+        document.getElementById("kurang").addEventListener("click", () => {
+            count--;
+            angkaEl.textContent = count;
+        });
+    </script>
+</body>
+</html>

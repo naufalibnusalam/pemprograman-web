@@ -1,0 +1,11 @@
+.flex-container {
+    display: flex;
+    justify-content: center;     /* Perataan horizontal */
+    align-items: center;         /* Perataan vertikal */
+    gap: 16px;                   /* Jarak antar item */
+    flex-wrap: wrap;             /* Item pindah baris jika penuh */
+}
+
+.flex-item {
+    flex: 1;                     /* Item mengisi ruang sama rata */
+}

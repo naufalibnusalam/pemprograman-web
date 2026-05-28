@@ -1,0 +1,18 @@
+/* Transisi (perubahan halus saat hover, dll) */
+.tombol {
+    background-color: #3498db;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.tombol:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Animasi (pergerakan otomatis) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.muncul {
+    animation: fadeIn 0.5s ease forwards;
+}
